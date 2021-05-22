@@ -10,7 +10,7 @@ response = acm.getGamesFromLichess(user)
 
 
 if response.status_code == 200:
-    acm.write_games(response)
+    acm.write_games(response, user)
 else:
     print(response.status_code)
     exit()
