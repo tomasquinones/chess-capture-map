@@ -22,7 +22,7 @@ else:
     exit()
 
 
-g = open('games.pgn', 'r')
+g = open(user + '.pgn', 'r')
 games = g.read()
 
 # gets a list of captures from games
@@ -30,14 +30,10 @@ captures = acm.captureFinder(games)
 
 g.close()
 
-# There must be a more elegant way to store this data.
-
-
-x = acm.captureCounter(captures)
-
 
 # Shortened variable name to simplify the displayboard 
-# x = captureCounts
+x = acm.captureCounter(captures)
+
 
 # There must be a more elegant way to display this data
 displayBoard = f'''
