@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run unittests
-        run: python3 testdtests_ascii_capture_map.py
+        run: python3 -m unittest discover
