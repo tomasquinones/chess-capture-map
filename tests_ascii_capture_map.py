@@ -17,12 +17,6 @@ class GetGamesTestCase(unittest.TestCase):
         self.assertNotEqual(status.status_code, 200)
 
 
-class writeGamesTestCase(unittest.TestCase):
-    '''Tests for writing games to file'''
-
-    def test_user_file_exists(self):
-        pass
-
 
 class captureFinderTestCase(unittest.TestCase):
     '''Tests for the regex and returning a list object'''
