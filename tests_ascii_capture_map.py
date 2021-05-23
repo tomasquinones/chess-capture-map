@@ -52,6 +52,7 @@ class capture_counter_test_case(unittest.TestCase):
         result = acm_function.captureCounter(test_data)
         self.assertEqual(result['b5'], 1)
         self.assertEqual(result['e2'], 2)
+        self.assertEqual(result['a8'], 0)
 
 if __name__ == '__main__':
     unittest.main()
