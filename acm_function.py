@@ -35,3 +35,4 @@ def captureCounter(data):
     for capture in data:
         captureCounts[capture] += 1
     return captureCounts
+
