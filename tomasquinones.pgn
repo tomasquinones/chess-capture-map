@@ -1,4 +1,22 @@
 [Event "Casual Correspondence game"]
+[Site "https://lichess.org/YKREhUQM"]
+[Date "2021.05.23"]
+[White "lichess AI level 1"]
+[Black "tomasquinones"]
+[Result "1/2-1/2"]
+[UTCDate "2021.05.23"]
+[UTCTime "00:53:41"]
+[WhiteElo "?"]
+[BlackElo "1500"]
+[Variant "Standard"]
+[TimeControl "-"]
+[ECO "C26"]
+[Termination "Normal"]
+
+1. e4 e5 2. Nc3 Nf6 3. h4 Ng4 4. d3 Bc5 5. f3 Nf2 6. Na4 Nxd1 7. Nb6 Bb4+ 8. Bd2 Nxb2 9. Bxb4 axb6 10. Rh2 d5 11. Ne2 c5 12. Bc3 d4 13. Bxd4 cxd4 14. Kd2 f5 15. Rb1 fxe4 16. dxe4 Rf8 17. Kc1 d3 18. Nd4 dxc2 19. Bb5+ Ke7 20. Nxc2 Nd3+ 21. Kd1 Nf2+ 22. Kc1 Qd1+ 23. Kb2 Nd3+ 24. Kb3 Qxb1+ 25. Kc4 Qxc2+ 26. Kd5 Qxa2+ 27. Bc4 Nb4+ 28. Kxe5 Qxc4 29. g4 Rxf3 30. Ra2 Qxa2 31. Kd4 Qd2+ 32. Ke5 Be6 33. h5 Qe3 34. h6 gxh6 35. g5 hxg5 1/2-1/2
+
+
+[Event "Casual Correspondence game"]
 [Site "https://lichess.org/q60RxPyt"]
 [Date "2021.05.19"]
 [White "lichess AI level 1"]

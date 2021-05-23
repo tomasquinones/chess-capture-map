@@ -1,18 +1,24 @@
 #!Python3
 # Fetches chess games, tallies captures to coordinates, renders a simple ascii capture map.
 
-import re, os, requests
+import re, os, requests, sys
 import acm_function as acm
 
 user = ''
-user = input('Enter lichess username:')
+
+if len(sys.argv) > 1:
+    user = ' '.join(sys.argv[1:])
+else:
+    user = input('Enter lichess username:')
+
+
 response = acm.getGamesFromLichess(user)
 
 
 if response.status_code == 200:
     acm.write_games(response, user)
 else:
-    print(response.status_code)
+    print(str(response.status_code) + " account not found. Try again.")
     exit()
 
 
