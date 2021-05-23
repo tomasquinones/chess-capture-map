@@ -7,8 +7,8 @@ def getGamesFromLichess(data):
     response = requests.get(BASE_URL + data)
     return response
 
-def write_games(data):
-    file = open('games.pgn', 'wb')
+def write_games(data, user):
+    file = open(user +'.pgn', 'wb')
     file.write(data.content)
     file.close
 
