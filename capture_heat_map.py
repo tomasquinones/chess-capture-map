@@ -1,11 +1,11 @@
 import plotly.express as px
-import acm_function
+import chm_function
 
 #!Python3
 # Fetches chess games, tallies captures to coordinates, renders a simple ascii capture map.
 
 import re, os, requests, sys
-import acm_function as acm
+import chm_function as chm
 
 user = ''
 
@@ -15,11 +15,11 @@ else:
     user = input('Enter lichess username:')
 
 
-response = acm.getGamesFromLichess(user)
+response = chm.getGamesFromLichess(user)
 
 
 if response.status_code == 200:
-    acm.write_games(response, user)
+    chm.write_games(response, user)
 else:
     print(str(response.status_code) + " account not found. Try again.")
     exit()
@@ -29,13 +29,13 @@ g = open(user + '.pgn', 'r')
 games = g.read()
 
 # gets a list of captures from games
-captures = acm.captureFinder(games)
+captures = chm.captureFinder(games)
 
 g.close()
 
 
 # Shortened variable name to simplify the displayboard 
-x = acm.captureCounter(captures)
+x = chm.captureCounter(captures)
 
 
 # There must be a more elegant way to display this data
@@ -59,7 +59,7 @@ else:
 
 
 
-data = acm_function.captureCounter(captures)
+data = chm_function.captureCounter(captures)
 
 graph_data = list(data.values())
 df = []
