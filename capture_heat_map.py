@@ -73,7 +73,7 @@ fig = px.imshow(df,
         x=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
         y=['8', '7', '6', '5', '4', '3', '2', '1'],
         title=f'Account: {user} -- Total Captures: {len(captures)}',
-
+        color_continuous_scale= 'thermal'
 ) 
 
 fig.show()
