@@ -4,7 +4,7 @@ import requests, re
 
 def getGamesFromLichess(data):
     BASE_URL = 'https://lichess.org/api/games/user/'
-    response = requests.get(BASE_URL + data)
+    response = requests.get(BASE_URL + data, timeout=50) # response will time out after 50 seconds
     return response
 
 def write_games(data, user):
@@ -15,6 +15,14 @@ def write_games(data, user):
 
 def captureFinder(data):
     captureRegex = re.compile(r'(x([a-hA-H][1-8]))', re.VERBOSE)
+    matches = []
+    for groups in captureRegex.findall(data):
+        matches.append(groups[1])
+    return matches
+
+def mateFinder(data):
+    # regex pattern to find checkmates e.g. Qxg2# or Qee7# or Rb8#
+    captureRegex = re.compile(r'(x?([a-hA-H][1-8])\#)', re.VERBOSE)
     matches = []
     for groups in captureRegex.findall(data):
         matches.append(groups[1])
@@ -33,6 +41,6 @@ def captureCounter(data):
     "a1": 0, "b1": 0, "c1": 0, "d1": 0, "e1": 0, "f1":0, "g1": 0, "h1": 0
     }
     for capture in data:
-        captureCounts[capture] += 1
+        captureCounts[capture.lower()] += 1
     return captureCounts
 
