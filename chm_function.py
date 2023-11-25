@@ -1,8 +1,8 @@
-#acm_function.py
+ #acm_function.py
 
 import requests, re
 
-def getGamesFromLichess(data):
+def get_games_from_lichess(data):
     BASE_URL = 'https://lichess.org/api/games/user/'
     response = requests.get(BASE_URL + data)
     return response

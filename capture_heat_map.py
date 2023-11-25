@@ -1,3 +1,4 @@
+
 import plotly.express as px
 import chm_function
 
@@ -15,7 +16,7 @@ else:
     user = input('Enter lichess username:')
 
 
-response = chm.getGamesFromLichess(user)
+response = chm.get_games_from_lichess(user)
 
 
 if response.status_code == 200:
@@ -64,7 +65,7 @@ data = chm_function.captureCounter(captures)
 graph_data = list(data.values())
 df = []
 
-#I have a list with 64 values that need to be split into 8 lists with 8 values each.
+# I have a list with 64 values that need to be split into 8 lists with 8 values each.
 df = [graph_data[x:x+8] for x in range(0, len(graph_data), 8)]
     
 
